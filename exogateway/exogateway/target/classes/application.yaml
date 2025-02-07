@@ -1,0 +1,48 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+  tomcat:
+    max-threads: 800
+    min-spare-threads: 30
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: gateway-service
+  main:
+    web-application-type: reactive
+  cloud:
+    config:
+      enabled: false
+    gateway:
+      routes:
+        - id: students
+          uri: lb://exostu #syntaxe : lb://[nom_de_application_ou_microservice]
+          predicates:
+            - Path=/students/**
+          #filters:
+            #- StripPrefix=1
+
+        - id: schools
+          uri: lb://exosch
+          predicates:
+            - Path=/schools/**
+          #filters:
+            #- StripPrefix=1
+
+    loadbalancer:
+      enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
