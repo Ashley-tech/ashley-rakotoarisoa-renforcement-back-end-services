@@ -5,8 +5,8 @@ exogateway -> Service d'API Gateway
 eureka -> Service d'Eureka
 oauth -> Service d'authentication
 
-Sur PGAdmin (pour PostgreSQL), créer une base de données appelé "scho". Pense aussi à modifier "spring.datasource.username" et "spring.datasource.password" du fichier application.properties avec ton nom d'utilisateur et ton mot de passe sur PostgreSQL.
-Sur MongoDB Compass (pour MongoDB), créer une base de données appelé "school".
+Sur PGAdmin (pour PostgreSQL), créer une base de données appelé "scho". Pense aussi à modifier "spring.datasource.username" et "spring.datasource.password" du fichier application.properties avec ton nom d'utilisateur et ton mot de passe PostgreSQL.
+Sur MongoDB Compass (pour MongoDB), créer une base de données appelé "school". Une collection "school" devrait se générer si elle n'existe pas dans cette base de données quand tu lanceras le microservice des étudiants
 
 Une fois toutes les configurations ci-dessus faites, tu peux démarrer ces 5 services.
 
