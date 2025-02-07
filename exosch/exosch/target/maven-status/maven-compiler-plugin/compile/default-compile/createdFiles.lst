@@ -1,0 +1,7 @@
+com\example\exosch\controller\SchoolController.class
+com\example\exosch\repository\SchoolRepository.class
+com\example\exosch\dto\SchoolDto.class
+com\example\exosch\entity\School.class
+com\example\exosch\dto\SchoolDto$SchoolDtoBuilder.class
+com\example\exosch\service\SchoolService.class
+com\example\exosch\ExoschApplication.class
