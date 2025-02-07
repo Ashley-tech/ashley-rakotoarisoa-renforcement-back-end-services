@@ -5,7 +5,7 @@ exogateway -> Service d'API Gateway
 eureka -> Service d'Eureka
 oauth -> Service d'authentication
 
-Sur PGAdmin (pour PostgreSQL), créer une base de données appelé "scho" et y importer le fichier SQL, situé dans le dossier exosch.
+Sur PGAdmin (pour PostgreSQL), créer une base de données appelé "scho".
 Sur MongoDB Compass (pour MongoDB), créer une base de données appelé "school".
 
 Une fois toutes les configurations ci-dessus faites, tu peux démarrer ces 5 services.
